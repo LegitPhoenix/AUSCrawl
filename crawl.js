@@ -272,85 +272,85 @@ async function crawl(page, termID, CRNS, instructors, subjects, levels, attribut
 async function startCrawl() {
 	const CRNS = sequelize.define('crns', {
 		id: {
-			type: Sequelize.INTEGER,
+			type: DataTypes.INTEGER,
 			autoIncrement: true,
 			primaryKey: true
 		},
-		crn: Sequelize.STRING,
-		subject: Sequelize.STRING,
-		classTitle: Sequelize.STRING,
-		classShortName: Sequelize.STRING,
-		classNumber: Sequelize.STRING,
-		classSection: Sequelize.INTEGER,
-		classType: Sequelize.STRING,
-		isLab: Sequelize.BOOLEAN,
-		instructor: Sequelize.STRING,
-		startTime: Sequelize.TIME,
-		endTime: Sequelize.TIME,
-		isSunday: Sequelize.BOOLEAN,
-		isMonday: Sequelize.BOOLEAN,
-		isTuesday: Sequelize.BOOLEAN,
-		isWednesday: Sequelize.BOOLEAN,
-		isThursday: Sequelize.BOOLEAN,
-		levels: Sequelize.STRING,
-		attributes: Sequelize.STRING,
-		credits: Sequelize.INTEGER,
-		classroom: Sequelize.STRING,
-		scheduleType: Sequelize.STRING,
-		seatsAvailable: Sequelize.BOOLEAN,
-		termID: Sequelize.STRING
+		crn: DataTypes.STRING,
+		subject: DataTypes.STRING,
+		classTitle: DataTypes.STRING,
+		classShortName: DataTypes.STRING,
+		classNumber: DataTypes.STRING,
+		classSection: DataTypes.INTEGER,
+		classType: DataTypes.STRING,
+		isLab: DataTypes.BOOLEAN,
+		instructor: DataTypes.STRING,
+		startTime: DataTypes.TIME,
+		endTime: DataTypes.TIME,
+		isSunday: DataTypes.BOOLEAN,
+		isMonday: DataTypes.BOOLEAN,
+		isTuesday: DataTypes.BOOLEAN,
+		isWednesday: DataTypes.BOOLEAN,
+		isThursday: DataTypes.BOOLEAN,
+		levels: DataTypes.STRING,
+		attributes: DataTypes.STRING,
+		credits: DataTypes.INTEGER,
+		classroom: DataTypes.STRING,
+		scheduleType: DataTypes.STRING,
+		seatsAvailable: DataTypes.BOOLEAN,
+		termID: DataTypes.STRING
 	});
 
 	const instructors = sequelize.define('instructors', {
 		id: {
-			type: Sequelize.INTEGER,
+			type: DataTypes.INTEGER,
 			autoIncrement: true,
 			primaryKey: true
 		},
-		name: Sequelize.STRING,
-		email: Sequelize.STRING,
-		firstSeen: Sequelize.STRING
+		name: DataTypes.STRING,
+		email: DataTypes.STRING,
+		firstSeen: DataTypes.STRING
 	});
 
 	const subjects = sequelize.define('subjects', {
 		id: {
-			type: Sequelize.INTEGER,
+			type: DataTypes.INTEGER,
 			autoIncrement: true,
 			primaryKey: true
 		},
-		shortName: Sequelize.STRING,
-		longName: Sequelize.STRING,
-		firstSeen: Sequelize.STRING
+		shortName: DataTypes.STRING,
+		longName: DataTypes.STRING,
+		firstSeen: DataTypes.STRING
 	});
 
 	const levels = sequelize.define('levels', {
 		id: {
-			type: Sequelize.INTEGER,
+			type: DataTypes.INTEGER,
 			autoIncrement: true,
 			primaryKey: true
 		},
-		level: Sequelize.STRING,
-		firstSeen: Sequelize.STRING
+		level: DataTypes.STRING,
+		firstSeen: DataTypes.STRING
 	});
 
 	const attributes = sequelize.define('attributes', {
 		id: {
-			type: Sequelize.INTEGER,
+			type: DataTypes.INTEGER,
 			autoIncrement: true,
 			primaryKey: true
 		},
-		attribute: Sequelize.STRING,
-		firstSeen: Sequelize.STRING
+		attribute: DataTypes.STRING,
+		firstSeen: DataTypes.STRING
 	});
 
 	const semesters = sequelize.define('semesters', {
 		id: {
-			type: Sequelize.INTEGER,
+			type: DataTypes.INTEGER,
 			autoIncrement: true,
 			primaryKey: true
 		},
-		termID: Sequelize.STRING,
-		termName: Sequelize.STRING
+		termID: DataTypes.STRING,
+		termName: DataTypes.STRING
 	});
 
 	await sequelize.authenticate();
