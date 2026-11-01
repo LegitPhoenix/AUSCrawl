@@ -1,4 +1,4 @@
-const Sequelize = require('sequelize').Sequelize;
+const { Sequelize, DataTypes } = require('sequelize');
 const chalk = require('chalk');
 const puppeteer = require('puppeteer');
 const sequelize = new Sequelize(`sqlite:./aus_data.db`, {
